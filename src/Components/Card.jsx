@@ -1,6 +1,5 @@
-import { Button, Col, Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
-import { BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
 import { CiLocationOn, CiShare2 } from "react-icons/ci";
 import { FaBusinessTime } from "react-icons/fa";

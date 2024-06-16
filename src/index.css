@@ -55,7 +55,7 @@
         background-color: transparent !important;
         left: 10px;
         border: none !important;
-        font-size: 20px !important; 
+        font-size: 20px !important;
     }
 
     .banner-button-right {
@@ -77,31 +77,77 @@
 
 .search-bar {
     margin: 20px 0;
-  }
-  
-  .search-bar .border-bottom-only {
+}
+
+.search-bar .border-bottom-only {
     border-bottom: 2px solid #ccc;
     border-radius: 0;
-  }
-  
-  .search-bar .input-group-text {
+}
+
+.search-bar .input-group-text {
     background-color: white;
     border: none;
-  }
-  
-  .search-bar .form-control {
+}
+
+.search-bar .form-control {
     border: none;
     border-radius: 0;
     box-shadow: none;
-  }
-  
-  .search-bar .input-group-text:first-child {
+}
+
+.search-bar .input-group-text:first-child {
     border: none;
-  }
-  
-  .search-bar .input-group-text:last-child {
+}
+
+.search-bar .input-group-text:last-child {
     border: none;
-  }
-  .nav-link {
-    color: #8e8e8e ;
-  }
+}
+
+.nav-link {
+    color: #8e8e8e;
+}
+
+
+
+
+/* modal */
+.modal-custom .modal-dialog {
+    position: relative;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    background: gray;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+}
+
+.modal-close-button svg {
+    color: #000;
+}
+
+.login-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+.bg-green{
+    background: #08881b2b;
+}
