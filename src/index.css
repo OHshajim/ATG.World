@@ -74,3 +74,34 @@
         margin: 0;
     }
 }
+
+.search-bar {
+    margin: 20px 0;
+  }
+  
+  .search-bar .border-bottom-only {
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+  }
+  
+  .search-bar .input-group-text {
+    background-color: white;
+    border: none;
+  }
+  
+  .search-bar .form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .search-bar .input-group-text:first-child {
+    border: none;
+  }
+  
+  .search-bar .input-group-text:last-child {
+    border: none;
+  }
+  .nav-link {
+    color: #8e8e8e ;
+  }

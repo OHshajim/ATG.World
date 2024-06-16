@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "image": "./card1.png",
+        "category": "✍️ Article",
+        "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+        "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "views":"5.8k",
+        "name": "John Doe",
+        "photo": "./Rectangle 3 (1).png"
+    },
+    {
+        "id": 2,
+        "image": "./card2.png",
+        "category": "🔬️ Education",
+        "title": "Tax Benefits for Investment under National Pension Scheme launched by Government",
+        "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "views": "1.6k",
+        "name": "Jane Smith",
+        "photo": "./Rectangle 3 (2).png"
+    },
+    {
+        "id": 3,
+        "image": "./Card3.png",
+        "category": "🗓️ Meetup",
+        "title": "Finance & Investment Elite Social Mixer @Lujiazui",
+        "description": "Join us for the annual React conference with industry experts.",
+        "views":"1.8k",
+        "name": "Alice Johnson",
+        "photo": "./Rectangle 3 (3).png",
+        "location": "Ahmedabad, India",
+        "time": "Fri, 12 Oct, 2018"
+    },
+    {
+        "id": 4,
+        "category": "💼️ Job",
+        "title": "Software Developer",
+        "description": "We are looking for a skilled frontend developer to join our team.",
+        "views": "1.4k",
+        "name": "Bob Brown",
+        "photo": "./Rectangle 3.png",
+        "location": "Noida, India",
+        "company": "Innovaccer Analytics Private Ltd."
+    }
+]
