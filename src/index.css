@@ -1,0 +1,76 @@
+.banner {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../public/bannar.png') center/cover no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    color: white;
+}
+
+.banner-content {
+    position: absolute;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.banner-button-left,
+.banner-button-right {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        position: static;
+        transform: none;
+        /* text-align: center; */
+        padding: 35px 20px;
+    }
+
+    .banner-button-left,
+    .banner-button-right {
+        display: block;
+        position: absolute;
+        top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: transparent;
+        color: white;
+    }
+
+    .banner-button-left {
+        background-color: transparent !important;
+        left: 10px;
+        border: none !important;
+        font-size: 20px !important; 
+    }
+
+    .banner-button-right {
+        background-color: transparent !important;
+        right: 10px;
+        border: 1px solid white !important;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .banner p {
+        font-size: .8rem;
+        margin: 0;
+    }
+}
