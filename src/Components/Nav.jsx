@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Form, Image, InputGroup, Navbar } from "react-bootstrap";
+import { Button, Dropdown, Form, Image, InputGroup, Navbar } from "react-bootstrap";
 import { IoSearch } from "react-icons/io5";
 import SignIn from "./SignIn";
 import { AuthContext } from "../Authentication/AuthProvider";
@@ -7,11 +7,15 @@ import { AuthContext } from "../Authentication/AuthProvider";
 const Nav = () => {
 
     const [showModalS, setShowModalS] = useState(false);
-    const { user } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
 
 
     const handleCloseS = () => setShowModalS(false);
     const handleShowS = () => setShowModalS(true);
+    console.log(user);
+    const handleLogout = () => {
+        logout()
+    }
     return (
         <div>
             <Navbar className="bg-body-tertiary px-2 px-md-5">
@@ -33,12 +37,19 @@ const Nav = () => {
                 <Navbar.Collapse className="justify-content-end w-100">
                     {
                         user ? <>
-                            <div className="d-flex align-items-center">
-                                <Image src={user.photoUrl} roundedCircle />
-                            </div>
+                            <Dropdown>
+                                    <Dropdown.Toggle variant="success" id="dropdown-basic" className="bg-transparent border-0">
+                                        <Image src={user?.photoURL || "../../public/Rectangle 3 (1).png"} alt="user" roundedCircle style={{ height: "50px", width: '50px' }} />
+                                    </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <Dropdown.Item>
+                                        <Button onClick={handleLogout}>Logout</Button>
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </> :
-                            <Navbar.Text className="sm-fs-5 fs-6">
-                                Create account. <button onClick={handleShowS} className="link-primary border border-0 bg-transparent" >It’s free!</button>
+                            <Navbar.Text className="">
+                                Create account.<span onClick={handleShowS} className="link-primary border border-0 bg-transparent" >It’s free!</span>
                             </Navbar.Text>
                     }
                 </Navbar.Collapse>

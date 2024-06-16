@@ -11,7 +11,7 @@ const SignIn = ({ show, handleClose }) => {
     const [error, setError] = useState('');
     const handleCloseL = () => setShowModalL(false);
     const handleShowL = () => setShowModalL(true);
-    const { createUser } = useContext(AuthContext)
+    const { createUser, loginWithGmail } = useContext(AuthContext)
     const handleSignUp = () => {
         handleClose()
         handleShowL()
@@ -38,13 +38,19 @@ const SignIn = ({ show, handleClose }) => {
             }
             )
     }
+    const handleGoogle = () => {
+        loginWithGmail()
+            .then(result => {
+                console.log(result.user);
+             })
+    }
     return (
         <div>
             <Modal show={show} onHide={handleClose} size="lg" centered>
                 <div className="modal-close-button" onClick={handleClose}>
                     <BiX size={30} />
                 </div>
-                <p className="text-success bg-green p-2 m-0">Let's learn, share & inspire each other with our passion for computer engineering. Login now 🤘🏼</p>
+                <p className="text-success bg-green p-2 m-0">Let us learn, share & inspire each other with our passion for computer engineering. Login now 🤘🏼</p>
                 <Modal.Body>
                     <Row>
 
@@ -77,7 +83,7 @@ const SignIn = ({ show, handleClose }) => {
                                 error && <p className="text-danger ">{error}</p>
                             }
                             <div className=" w-100">
-                                <Button variant="outline-danger" className="w-48 d-flex align-items-center justify-content-center w-100">
+                                <Button variant="outline-danger" className="w-48 d-flex align-items-center justify-content-center w-100" onClick={handleGoogle}>
                                     <CgGoogle className="me-2" />
                                     Sign Up With Google
                                 </Button>
@@ -90,7 +96,7 @@ const SignIn = ({ show, handleClose }) => {
                         <Col md={6} className="d-none d-md-block login-photo">
                             {/* Replace with your image */}
                             <Navbar.Text className="sm-fs-5 fs-6">
-                                Already have an account yet?<button onClick={handleSignUp} className="link-primary border border-0 bg-transparent" >Sign Up Now</button>
+                                Already have an account yet?<button onClick={handleSignUp} className="link-primary border border-0 bg-transparent" >Login Now</button>
                             </Navbar.Text>
                             <img src="../../public/atg_illustration.png" alt="Login" className="img-fluid" />
                         </Col>
