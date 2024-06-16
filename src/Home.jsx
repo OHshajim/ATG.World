@@ -20,7 +20,7 @@ const Home = () => {
     const [PHY, setPHY] = useState(false)
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch('../public/Data.json')
+        fetch('./Data.json')
             .then(res => res.json())
             .then(data => {
                 setData(data)
@@ -115,7 +115,7 @@ const Home = () => {
                                 <h4 className='mb-4'><GrLike /> Recommended Groups</h4>
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className='d-flex align-items-center'>
-                                        <Image src="../public/Rectangle 3 (1).png" roundedCircle />
+                                        <Image src="./Rectangle 3 (1).png" roundedCircle />
                                         <h6 className=' ms-3 '>English</h6>
                                     </div>
                                     <Button className='bg-black border-0' onClick={() => setEng(!eng)}>{eng ? "followed" : "Follow"}</Button>
@@ -123,21 +123,21 @@ const Home = () => {
 
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className='d-flex align-items-center'>
-                                        <Image src="../public/Rectangle 3.png" roundedCircle />
+                                        <Image src="./Rectangle 3.png" roundedCircle />
                                         <h6 className=' ms-3 '>MBA</h6>
                                     </div>
                                     <Button className='bg-black border-0' onClick={() => setMBA(!MBA)}>{MBA ? "followed" : "Follow"}</Button>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center my-2">
                                     <div className='d-flex align-items-center'>
-                                        <Image src="../public/Rectangle 3 (2).png" roundedCircle />
+                                        <Image src="./Rectangle 3 (2).png" roundedCircle />
                                         <h6 className=' ms-3 '>Mathematics </h6>
                                     </div>
                                     <Button className='bg-black border-0' onClick={() => setMath(!Math)}>{Math ? "followed" : "Follow"}</Button>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center my-2">
                                     <div className='d-flex align-items-center'>
-                                        <Image src="../public/Rectangle 3 (3).png" roundedCircle />
+                                        <Image src="./Rectangle 3 (3).png" roundedCircle />
                                         <h6 className=' ms-3 '>Philosophy</h6>
                                     </div>
                                     <Button className='bg-black border-0' onClick={() => setPHY(!PHY)}>{PHY ? "followed" : "Follow"}</Button>

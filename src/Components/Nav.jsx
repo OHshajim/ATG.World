@@ -20,7 +20,7 @@ const Nav = () => {
         <div>
             <Navbar className="bg-body-tertiary px-2 px-md-5">
 
-                <Image src="../../public/logo.png" style={{ maxWidth: '140px' }} />
+                <Image src="./logo.png" style={{ maxWidth: '140px' }} />
                 <div className="d-lg-flex justify-content-center w-100 d-none rounded ">
                     <Form >
                         <InputGroup >
