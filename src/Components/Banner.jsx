@@ -1,7 +1,7 @@
 import { Button, Container } from "react-bootstrap";
 import { FaArrowLeft } from "react-icons/fa";
 
-const Banner = () => {
+const Banner = ({ isJoin, setJoin }) => {
     return (
         <div>
             <header className="banner">
@@ -13,8 +13,9 @@ const Banner = () => {
                 <Button className="banner-button-left d-md-none">
                     <FaArrowLeft />
                 </Button>
-                <Button className="banner-button-right d-md-none">
-                    Join Group
+                <Button onClick={() => setJoin(!isJoin)
+                } className="banner-button-right d-md-none">
+                    {isJoin ? "Join Group" : "leave Group"}
                 </Button>
             </header>
         </div>

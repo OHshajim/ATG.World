@@ -42,6 +42,7 @@ const SignIn = ({ show, handleClose }) => {
         loginWithGmail()
             .then(result => {
                 console.log(result.user);
+                handleClose()
              })
     }
     return (

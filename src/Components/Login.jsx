@@ -33,6 +33,7 @@ const Login = ({ show, handleClose }) => {
         loginWithGmail()
             .then(result => {
                 console.log(result.user);
+                handleClose()
             })
     }
     return (
